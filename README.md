@@ -64,59 +64,61 @@ GROUP BY description
 ORDER BY SUM(revenue) DESC
 LIMIT 10;
 
-🧠 Analytical Views Created
+## 🧠 Analytical Views Created
 
 The project uses SQL views to build an analytics layer:
 
-sales_summary → Overall KPIs
-product_performance → Product insights
-country_sales → Geographic analysis
-monthly_sales → Sales trends
-customer_rfm → Customer segmentation
-customer_clv → Customer lifetime value
+- `sales_summary` → Overall KPIs  
+- `product_performance` → Product insights  
+- `country_sales` → Geographic analysis  
+- `monthly_sales` → Sales trends  
+- `customer_rfm` → Customer segmentation  
+- `customer_clv` → Customer lifetime value  
 
-📊 Key Insights
-Top 20% customers contribute majority of revenue
-United Kingdom generates the highest sales
-Certain products consistently dominate revenue
-Repeat customers generate higher lifetime value
-Strong product associations identified using market basket analysis
 
-🗂️ Project Structure
+## 📊 Key Insights
+
+- Top 20% customers contribute the majority of revenue  
+- United Kingdom generates the highest sales  
+- Certain products consistently dominate revenue  
+- Repeat customers generate higher lifetime value  
+- Strong product associations identified using market basket analysis  
+
+
+## 🗂️ Project Structure
 Ecommerce-Customer-Intelligence/
 ├── data/
-│   ├── raw/
-│   └── processed/
+│ ├── raw/
+│ └── processed/
 ├── sql/
-│   ├── database_setup.sql
-│   ├── table_creation.sql
-│   ├── data_analysis.sql
-│   ├── views.sql
+│ ├── database_setup.sql
+│ ├── table_creation.sql
+│ ├── data_analysis.sql
+│ ├── views.sql
 ├── python/
-│   ├── basket_analysis.py
-│   └── requirements.txt
+│ ├── basket_analysis.py
+│ └── requirements.txt
 ├── output/
 ├── docs/
 └── README.md
 
-▶️ How to Run
-🔹 1. SQL Setup
-Create database using database_setup.sql
-Create schema & table using table_creation.sql
-Import cleaned dataset
-Run views.sql to generate analytics views
 
-🔹 2. Python Analysis
+
+## ▶️ How to Run
+
+### 🔹 1. SQL Setup
+- Create database using `database_setup.sql`  
+- Create schema & tables using `table_creation.sql`  
+- Import cleaned dataset  
+- Run `views.sql` to generate analytics views  
+
+### 🔹 2. Python Analysis
+```bash
 pip install -r python/requirements.txt
 python python/basket_analysis.py
-
+```
 📌 Output
-Cleaned dataset (397K records)
+Cleaned dataset (~397K records)
 SQL-based analytics results
 Customer segmentation (RFM)
 Market Basket Analysis (association rules)
-
-🚀 Future Improvements
-Add Power BI interactive dashboard
-Implement real-time data pipeline
-Add machine learning models (churn prediction, recommendation system)
